@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حلو وحادق - وجبات سريعة ولذيذة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"IBM Plex Sans Arabic"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            // Food-inspired warm and light palette
+                            dark: '#A84A33',      // Deep Coral/Rust
+                            primary: '#F27A5E',   // Soft Coral/Orange
+                            accent: '#F2B263',    // Warm Yellow/Gold
+                            deep: '#8E352B',      // Darker accent
+                            bg: '#FFFBF9',        // Warm off-white
+                            card: '#FFFFFF',
+                            text: '#4A3631',      // Dark brown for text
+                            muted: '#8A736C',     // Muted brown
+                            border: '#F2E3DF'     // Soft border
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #FFFBF9;
+            color: #4A3631;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(242, 122, 94, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+        }
+        .input-focus:focus {
+            border-color: #F27A5E;
+            box-shadow: 0 0 0 4px rgba(242, 122, 94, 0.15);
+        }
+        .emoji-icon {
+            font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-[#F27A5E] selection:text-white">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-brand-border/60 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-11 h-11 rounded-2xl bg-brand-primary/10 flex items-center justify-center overflow-hidden shadow-sm border border-brand-primary/20">
+                    <img src="https://cdn.phototourl.com/free/2026-09-15-fdc29d10-82b2-4713-a015-b86d8c04401d.png" alt="أيقونة برنامج حلو وحادق" class="w-7 h-7 object-contain" onerror="this.src='https://placehold.co/44x44/F27A5E/ffffff?text=🍔'">
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-brand-dark block">برنامج حلو وحادق</span>
+                    <span class="text-xs text-brand-muted font-medium block">جمعية التنمية الاهلية بعوالي المدينة المنورة</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-3">
+                <span class="px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold">
+                    <i class="fa-solid fa-gift ml-1.5"></i> مجاناً بمناسبة اليوم الوطني
+                </span>
+                <a href="#registerSection" class="px-5 py-2.5 bg-brand-primary hover:bg-brand-dark text-white text-sm font-medium rounded-full transition shadow-md shadow-brand-primary/20">
+                    سجل الآن
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-12 lg:py-16">
+        
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-accent/20 text-brand-dark text-xs font-semibold mb-6 tracking-wide border border-brand-accent/30">
+                <i class="fa-solid fa-star text-brand-accent"></i> برعاية كريمة من مؤسسة سالم بن محفوظ الاهلية 🇸🇦
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-brand-dark mb-6 leading-tight">
+                لما الجوع يقرر يهاجمك 😩 لابد من وجبة سريعة! 🥪
+            </h1>
+            <p class="text-base sm:text-lg text-brand-muted max-w-3xl mx-auto leading-relaxed">
+                وجبة 🍞🍳🥚 تكون سخنة سايحة 🥞 ومليانة نكهات 🧈🧀 تخطف القلب ❤️👁️ والعين من اول قطمة، وطعم يظبط المود ويقفل على الجوع في دقائق 🍟. من الحلو 🧇 للحادق 🍳 السعادة لها طعم ثاني معنا!
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Card 1: Organizers -->
+            <div class="bg-white rounded-3xl p-6 soft-shadow border border-brand-border flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-brand-primary/10 text-brand-primary flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">التنظيم والإشراف</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed mb-4">
+                        تنظيم فريق الفوز التابع لجمعية التنمية الاهلية بعوالي المدينة المنورة.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2: Date & Time -->
+            <div class="bg-white rounded-3xl p-6 soft-shadow border border-brand-border flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-brand-accent/20 text-brand-dark flex items-center justify-center text-xl mb-4">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">الموعد والتوقيت</h3>
+                    <ul class="text-sm text-brand-muted space-y-2 mb-4">
+                        <li><i class="fa-solid fa-calendar-check text-brand-primary ml-2"></i> السبت: 8 / 4 / 1448 هـ</li>
+                        <li><i class="fa-solid fa-calendar-day text-brand-primary ml-2"></i> الموافق: 19 / 9 / 2026 م</li>
+                        <li><i class="fa-solid fa-clock text-brand-primary ml-2"></i> من 2:00 ظهراً إلى 4:00 عصراً</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <span class="text-xs line-through text-gray-400">30 ريال</span>
+                    <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold rounded-full">مجاناً في حب الوطن 🇸🇦</span>
+                </div>
+            </div>
+
+            <!-- Card 3: Target Audience -->
+            <div class="bg-white rounded-3xl p-6 soft-shadow border border-brand-border flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-brand-primary/10 text-brand-primary flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">الفئات المستهدفة</h3>
+                    <ul class="text-sm text-brand-muted space-y-2 mb-4">
+                        <li><span class="emoji-icon ml-1">👩</span> البنات: من 5 سنوات إلى 15 عام</li>
+                        <li><span class="emoji-icon ml-1">👦🏻</span> الأولاد: من 5 سنوات إلى 8 سنوات</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-brand-primary to-brand-accent rounded-3xl p-8 text-white mb-16 shadow-lg relative overflow-hidden">
+            <div class="relative z-10 max-w-2xl">
+                <div class="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold mb-3 backdrop-blur-sm">
+                    الاسبوع الثاني
+                </div>
+                <h3 class="text-2xl font-bold mb-4">قائمة ورشة العمل 🧑🏻‍🍳</h3>
+                <ul class="space-y-3 text-base text-white/95 font-medium">
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm shadow-sm"><span class="emoji-icon">🧆</span></div>
+                        حلا التمر المفيد 🫘
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm shadow-sm"><span class="emoji-icon">🥙</span></div>
+                        سلطة مكرونة لذيذة
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="registerSection" class="bg-white rounded-3xl p-6 sm:p-10 soft-shadow border border-brand-border relative overflow-hidden">
+            
+            <div class="text-center mb-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark mb-2">استمارة التسجيل 📝</h2>
+                <p class="text-sm text-brand-muted">سجل بياناتك الآن لحضور ورشة حلو وحادق الممتعة.</p>
+            </div>
+
+            <!-- Success Notification Overlay -->
+            <div id="successMessage" class="hidden absolute inset-0 bg-white/95 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-8 transition-all">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mb-4 animate-bounce shadow-sm">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-dark mb-2">تم التسجيل بنجاح!</h3>
+                <p class="text-brand-muted max-w-md mb-6">شكراً لتسجيلك في برنامج حلو وحادق. تم إرسال بياناتك بنجاح وننتظر حضوركم والاستمتاع معنا.</p>
+                <button onclick="resetForm()" class="px-6 py-2.5 bg-brand-primary text-white text-sm font-medium rounded-full hover:bg-brand-dark transition shadow-md">
+                    تسجيل شخص آخر
+                </button>
+            </div>
+
+            <!-- Google Form Connected Endpoint -->
+            <form id="cookingForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfEXRfBGz3XZgyguDFVa7_wvK6vN44IU4Pp6J_kW3c7hiPL4A/formResponse" method="POST" target="hidden_iframe" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                
+                <!-- Hidden iframe to bypass CORS -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(typeof submitted !== 'undefined' && submitted) { showSuccessState(); }"></iframe>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Name Field -->
+                    <div class="space-y-2">
+                        <label for="nameInput" class="block text-sm font-bold text-brand-text">
+                            الأسم ثلاثي <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-brand-muted">
+                                <i class="fa-regular fa-user"></i>
+                            </span>
+                            <input type="text" id="nameInput" name="entry.470654436" required placeholder="أدخل الاسم الثلاثي" 
+                                class="w-full pl-4 pr-11 py-3.5 bg-brand-bg border border-brand-border rounded-2xl text-brand-text text-sm focus:outline-none input-focus transition-all">
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Phone Field -->
+                    <div class="space-y-2">
+                        <label for="phoneInput" class="block text-sm font-bold text-brand-text">
+                            رقم الجوال (واتس أب) <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-brand-muted">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </span>
+                            <input type="tel" id="phoneInput" name="entry.976399009" required placeholder="05xxxxxxxx" dir="ltr"
+                                class="w-full pr-4 pl-11 py-3.5 bg-brand-bg border border-brand-border rounded-2xl text-brand-text text-sm focus:outline-none input-focus text-right transition-all">
+                        </div>
+                    </div>
+
+                    <!-- Age Field -->
+                    <div class="space-y-2">
+                        <label for="ageInput" class="block text-sm font-bold text-brand-text">
+                            العمر 
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-brand-muted">
+                                <i class="fa-solid fa-child"></i>
+                            </span>
+                            <input type="text" id="ageInput" name="entry.1604457141" placeholder="أدخل العمر" 
+                                class="w-full pr-11 pl-4 py-3.5 bg-brand-bg border border-brand-border rounded-2xl text-brand-text text-sm focus:outline-none input-focus transition-all">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button type="submit" id="submitBtn" class="w-full py-4 px-6 bg-brand-primary hover:bg-brand-dark text-white font-bold rounded-2xl shadow-lg shadow-brand-primary/20 transition-all duration-300 flex items-center justify-center gap-2">
+                        <span>إرسال طلب التسجيل</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Contact & Location Info -->
+            <div class="mt-8 pt-6 border-t border-brand-border/60 flex flex-col items-center justify-center gap-4 text-sm">
+                <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+                    <div class="flex items-center gap-2 bg-brand-bg px-4 py-2.5 rounded-xl border border-brand-border">
+                        <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <span class="text-brand-muted">للتواصل:</span>
+                        <a href="https://wa.me/966537780407" dir="ltr" class="font-bold text-brand-text hover:text-brand-primary transition">0537780407</a>
+                    </div>
+                    
+                    <div>
+                        <a href="https://maps.google.com/?q=24.450022,39.619968" target="_blank" rel="noopener noreferrer" class="px-5 py-3 bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-dark font-semibold rounded-xl transition flex items-center gap-2 border border-brand-primary/10">
+                            <i class="fa-solid fa-location-dot"></i> موقع الفعالية (خرائط جوجل)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-brand-border/60 py-10 mt-16">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-right">
+                <p class="text-sm text-brand-text font-medium mb-1">
+                    جميع الحقوق محفوظة بواسطة | <a href="https://mol7j.com" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:underline font-bold transition">محمد الحاج</a>
+                </p>
+                <p class="text-xs text-brand-muted">جمعية التنمية الاهلية بعوالي المدينة المنورة &copy; 2026</p>
+            </div>
+            
+            <div class="flex items-center space-x-6 space-x-reverse text-xl text-brand-muted">
+                <a href="https://www.instagram.com/tnmiaaorgsa" target="_blank" rel="noopener noreferrer" class="hover:text-brand-primary transition p-2" aria-label="انستغرام جمعية التنمية">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://x.com/tnmiaaorgsa" target="_blank" rel="noopener noreferrer" class="hover:text-brand-primary transition p-2 inline-flex items-center justify-center w-8 h-8" aria-label="تويتر/إكس جمعية التنمية">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://www.tnmiaa.org.sa/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-primary transition p-2" aria-label="الموقع الرسمي">
+                    <i class="fa-solid fa-globe"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var submitted = false;
+
+        function handleFormSubmit(event) {
+            submitted = true;
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> جاري إرسال الرد...';
+            
+            setTimeout(() => {
+                if(submitted) {
+                    showSuccessState();
+                }
+            }, 2000);
+        }
+
+        function showSuccessState() {
+            document.getElementById('successMessage').classList.remove('hidden');
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = false;
+            btn.innerHTML = '<span>إرسال طلب التسجيل</span><i class="fa-solid fa-paper-plane"></i>';
+        }
+
+        function resetForm() {
+            document.getElementById('cookingForm').reset();
+            document.getElementById('successMessage').classList.add('hidden');
+            submitted = false;
+        }
+    </script>
+</body>
+</html>
